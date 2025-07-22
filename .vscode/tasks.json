@@ -1,0 +1,56 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install Dependencies and Start Dev Server",
+			"type": "shell",
+			"command": "npm install && npm start",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Enhanced OCR & LLM Backend Server",
+			"type": "shell",
+			"command": "cd backend && python main.py",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Install Backend Dependencies",
+			"type": "shell",
+			"command": "cd backend && pip install -r requirements.txt",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Backend Tests",
+			"type": "shell",
+			"command": "cd backend && python -m pytest test_enhanced.py -v",
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Demo LLM Analysis",
+			"type": "shell",
+			"command": "cd backend && python demo_llm_analysis.py --widget-count 37",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Setup Backend Environment",
+			"type": "shell",
+			"command": "cd backend && python -m venv venv && venv\\Scripts\\activate && pip install -r requirements.txt",
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [],
+			"windows": {
+				"command": "cd backend && python -m venv venv && .\\venv\\Scripts\\activate && pip install -r requirements.txt"
+			}
+		}
+	]
+}

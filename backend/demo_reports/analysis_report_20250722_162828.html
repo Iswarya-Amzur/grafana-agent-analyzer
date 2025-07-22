@@ -1,0 +1,421 @@
+<h1>📊 Grafana Monitoring Analysis Report</h1>
+<p><strong>Generated:</strong> 2025-07-22 16:28:28<br />
+<strong>Widgets Analyzed:</strong> 37<br />
+<strong>Analysis Model:</strong> gpt-4o  </p>
+<hr />
+<h2>📊 Widget Analysis Summary</h2>
+<h3>Per-Widget Analysis Table</h3>
+<table>
+<thead>
+<tr>
+<th>Widget Name</th>
+<th>Category</th>
+<th>Current Value</th>
+<th>Min/Max</th>
+<th>Trend</th>
+<th>Status</th>
+<th>Key Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU Usage</td>
+<td>Infrastructure</td>
+<td>38.9%</td>
+<td>10.0%/95.0%</td>
+<td>Rising</td>
+<td>Warning</td>
+<td>Rising trend, but within acceptable range</td>
+</tr>
+<tr>
+<td>CPU Load Average</td>
+<td>Infrastructure</td>
+<td>2</td>
+<td>0/8</td>
+<td>Rising</td>
+<td>Info</td>
+<td>Load average is increasing, monitor closely</td>
+</tr>
+<tr>
+<td>Memory Usage</td>
+<td>Infrastructure</td>
+<td>50.6%</td>
+<td>15.0%/90.0%</td>
+<td>Rising</td>
+<td>Info</td>
+<td>Usage increasing, but within limits</td>
+</tr>
+<tr>
+<td>Memory Available</td>
+<td>Infrastructure</td>
+<td>4.9 GB</td>
+<td>0.5 GB/16.0 GB</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable availability</td>
+</tr>
+<tr>
+<td>Disk Usage /</td>
+<td>Storage</td>
+<td>43.4%</td>
+<td>20.0%/95.0%</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable usage</td>
+</tr>
+<tr>
+<td>Disk Usage /var</td>
+<td>Storage</td>
+<td>36.9%</td>
+<td>10.0%/85.0%</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable usage</td>
+</tr>
+<tr>
+<td>Disk I/O Read</td>
+<td>Storage</td>
+<td>91.6 MB/s</td>
+<td>5.0 MB/s/150.0 MB/s</td>
+<td>Spiking</td>
+<td>Critical</td>
+<td>High I/O read, requires attention</td>
+</tr>
+<tr>
+<td>Disk I/O Write</td>
+<td>Storage</td>
+<td>52.3 MB/s</td>
+<td>2.0 MB/s/80.0 MB/s</td>
+<td>Spiking</td>
+<td>Critical</td>
+<td>High I/O write, requires attention</td>
+</tr>
+<tr>
+<td>Network In</td>
+<td>Network</td>
+<td>78.4 Mbps</td>
+<td>1.0 Mbps/100.0 Mbps</td>
+<td>Stable</td>
+<td>Info</td>
+<td>High but stable network input</td>
+</tr>
+<tr>
+<td>Network Out</td>
+<td>Network</td>
+<td>21.7 Mbps</td>
+<td>0.5 Mbps/50.0 Mbps</td>
+<td>Rising</td>
+<td>Warning</td>
+<td>Rising trend, monitor for congestion</td>
+</tr>
+<tr>
+<td>Network Errors</td>
+<td>Network</td>
+<td>8</td>
+<td>0/25</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Within acceptable range</td>
+</tr>
+<tr>
+<td>TCP Connections</td>
+<td>Network</td>
+<td>691</td>
+<td>50/1000</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable number of connections</td>
+</tr>
+<tr>
+<td>Response Time</td>
+<td>Performance</td>
+<td>538.5 ms</td>
+<td>50.0 ms/2000.0 ms</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Response time is stable</td>
+</tr>
+<tr>
+<td>Throughput</td>
+<td>Performance</td>
+<td>1850</td>
+<td>100/5000</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable throughput</td>
+</tr>
+<tr>
+<td>Error Rate</td>
+<td>Reliability</td>
+<td>3.1%</td>
+<td>0.0%/5.0%</td>
+<td>Spiking</td>
+<td>Critical</td>
+<td>Spiking error rate, requires attention</td>
+</tr>
+<tr>
+<td>Success Rate</td>
+<td>Reliability</td>
+<td>97.4%</td>
+<td>95.0%/100.0%</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable success rate</td>
+</tr>
+<tr>
+<td>DB Connections</td>
+<td>Database</td>
+<td>35</td>
+<td>5/100</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable DB connections</td>
+</tr>
+<tr>
+<td>DB Query Time</td>
+<td>Database</td>
+<td>230.6 ms</td>
+<td>10.0 ms/500.0 ms</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable query time</td>
+</tr>
+<tr>
+<td>DB Lock Waits</td>
+<td>Database</td>
+<td>36</td>
+<td>0/50</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Within acceptable range</td>
+</tr>
+<tr>
+<td>DB Cache Hit Rate</td>
+<td>Database</td>
+<td>92.9%</td>
+<td>85.0%/99.0%</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable cache hit rate</td>
+</tr>
+<tr>
+<td>Active Users</td>
+<td>Application</td>
+<td>420</td>
+<td>50/1000</td>
+<td>Rising</td>
+<td>Info</td>
+<td>Rising trend, monitor for capacity</td>
+</tr>
+<tr>
+<td>Session Count</td>
+<td>Application</td>
+<td>157</td>
+<td>20/500</td>
+<td>Rising</td>
+<td>Info</td>
+<td>Rising trend, monitor for capacity</td>
+</tr>
+<tr>
+<td>Queue Length</td>
+<td>Application</td>
+<td>54</td>
+<td>0/100</td>
+<td>Rising</td>
+<td>Warning</td>
+<td>Rising queue length, potential bottleneck</td>
+</tr>
+<tr>
+<td>Cache Hit Rate</td>
+<td>Performance</td>
+<td>92.6%</td>
+<td>80.0%/98.0%</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable cache hit rate</td>
+</tr>
+<tr>
+<td>Pod CPU Usage</td>
+<td>Container</td>
+<td>57.9%</td>
+<td>10.0%/90.0%</td>
+<td>Spiking</td>
+<td>Warning</td>
+<td>Spiking usage, monitor for resource limits</td>
+</tr>
+<tr>
+<td>Pod Memory Usage</td>
+<td>Container</td>
+<td>53.7%</td>
+<td>20.0%/85.0%</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable memory usage</td>
+</tr>
+<tr>
+<td>Container Restarts</td>
+<td>Container</td>
+<td>3</td>
+<td>0/10</td>
+<td>Spiking</td>
+<td>Warning</td>
+<td>Spiking restarts, investigate causes</td>
+</tr>
+<tr>
+<td>Node Count</td>
+<td>Container</td>
+<td>9</td>
+<td>3/20</td>
+<td>Falling</td>
+<td>Info</td>
+<td>Decreasing node count, monitor closely</td>
+</tr>
+<tr>
+<td>API Latency</td>
+<td>API</td>
+<td>498.4 ms</td>
+<td>25.0 ms/800.0 ms</td>
+<td>Spiking</td>
+<td>Critical</td>
+<td>High latency, requires immediate attention</td>
+</tr>
+<tr>
+<td>Upload Rate</td>
+<td>Application</td>
+<td>78</td>
+<td>10/200</td>
+<td>Rising</td>
+<td>Info</td>
+<td>Rising trend, monitor for capacity</td>
+</tr>
+<tr>
+<td>Processing Queue</td>
+<td>Application</td>
+<td>245</td>
+<td>0/500</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable processing queue</td>
+</tr>
+<tr>
+<td>Concurrent Tasks</td>
+<td>Application</td>
+<td>25</td>
+<td>5/50</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable concurrent tasks</td>
+</tr>
+<tr>
+<td>Worker Threads</td>
+<td>Application</td>
+<td>15</td>
+<td>2/20</td>
+<td>Rising</td>
+<td>Info</td>
+<td>Rising trend, monitor for resource limits</td>
+</tr>
+<tr>
+<td>Log Errors/min</td>
+<td>Observability</td>
+<td>65</td>
+<td>0/100</td>
+<td>Stable</td>
+<td>Warning</td>
+<td>High error rate, investigate causes</td>
+</tr>
+<tr>
+<td>Alert Count</td>
+<td>Observability</td>
+<td>4</td>
+<td>0/15</td>
+<td>Spiking</td>
+<td>Warning</td>
+<td>Spiking alerts, requires attention</td>
+</tr>
+<tr>
+<td>Backup Status</td>
+<td>Reliability</td>
+<td>37</td>
+<td>0/48</td>
+<td>Stable</td>
+<td>Info</td>
+<td>Stable backup status</td>
+</tr>
+<tr>
+<td>SSL Cert Expiry</td>
+<td>Security</td>
+<td>38</td>
+<td>1/90</td>
+<td>Falling</td>
+<td>Info</td>
+<td>SSL certificate expiry within safe range</td>
+</tr>
+</tbody>
+</table>
+<h2>🔍 Detailed Analysis</h2>
+<h3>Infrastructure Widgets</h3>
+<ul>
+<li><strong>CPU Usage &amp; Load Average</strong>: Both are rising, but currently within acceptable thresholds. Continuous monitoring is recommended to prevent potential overload.</li>
+<li><strong>Memory Usage &amp; Availability</strong>: Memory usage is rising but remains within limits. Ensure sufficient memory allocation to avoid future issues.</li>
+</ul>
+<h3>System Widgets</h3>
+<ul>
+<li><strong>Disk I/O</strong>: Both read and write operations are spiking, indicating potential bottlenecks. Immediate investigation is needed to prevent system slowdowns.</li>
+<li><strong>Network Traffic</strong>: Network In is stable but high, while Network Out is rising. Monitor for potential congestion or bandwidth issues.</li>
+</ul>
+<h2>⚠️ Critical Issues &amp; Alerts</h2>
+<ul>
+<li><strong>Disk I/O Read/Write</strong>: High I/O operations require immediate attention to avoid performance degradation.</li>
+<li><strong>Error Rate</strong>: Spiking error rate indicates potential system reliability issues.</li>
+<li><strong>API Latency</strong>: High latency suggests performance bottlenecks that need urgent resolution.</li>
+</ul>
+<h2>🛠️ Recommendations</h2>
+<h3>Immediate Actions (&lt; 1 hour)</h3>
+<ul>
+<li>Investigate and resolve high Disk I/O operations.</li>
+<li>Address spiking error rates to improve system reliability.</li>
+<li>Analyze and mitigate causes of high API latency.</li>
+</ul>
+<h3>Short-term Actions (&lt; 24 hours)</h3>
+<ul>
+<li>Monitor CPU and memory trends closely to anticipate potential overloads.</li>
+<li>Investigate causes of container restarts and implement fixes.</li>
+<li>Review network configurations to handle rising Network Out trends.</li>
+</ul>
+<h3>Long-term Optimizations (&lt; 1 week)</h3>
+<ul>
+<li>Conduct a comprehensive review of disk usage and optimize storage configurations.</li>
+<li>Implement caching strategies to reduce API latency and improve response times.</li>
+<li>Plan for capacity upgrades if rising trends in active users and session counts persist.</li>
+</ul>
+<h2>📈 Performance Insights</h2>
+<p>Overall, the system is functioning within acceptable parameters, but several key areas require immediate attention to prevent performance degradation. Disk I/O, error rates, and API latency are critical areas needing urgent action. Continuous monitoring and proactive capacity planning will help maintain system health.</p>
+<h2>🎯 Key Metrics Summary</h2>
+<ul>
+<li><strong>Total Widgets Analyzed</strong>: 36</li>
+<li><strong>Widgets with Issues</strong>: 10</li>
+<li><strong>Critical Alerts</strong>: 3</li>
+<li><strong>Performance Score</strong>: 7/10</li>
+</ul>
+<p>This analysis highlights the importance of addressing critical issues promptly while maintaining vigilance over rising trends to ensure optimal system performance.</p>
+<hr />
+<h2>📋 Technical Details</h2>
+<p><strong>Analysis Parameters:</strong>
+- OCR Confidence Threshold: &gt; 30%
+- Model Used: gpt-4o
+- Tokens Consumed: 5280
+- Processing Time: &lt; 60s</p>
+<p><strong>Data Sources:</strong>
+- Infrastructure Screenshots: ✅
+- System Screenshots: ✅<br />
+- Date Range: 2025-07-22T15:27:57.820575 to 2025-07-22T16:27:57.820575</p>
+<h2>🔗 Next Steps</h2>
+<ol>
+<li><strong>Review Critical Issues</strong> - Address any items marked as urgent</li>
+<li><strong>Implement Recommendations</strong> - Follow the prioritized action plan</li>
+<li><strong>Monitor Progress</strong> - Track metrics improvement over time</li>
+<li><strong>Schedule Follow-up</strong> - Plan next analysis cycle</li>
+</ol>
+<hr />
+<p><em>Report generated by Grafana Screenshot Analysis System</em></p>

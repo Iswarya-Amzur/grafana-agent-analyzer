@@ -1,0 +1,51 @@
+{
+  "analysis_result": {
+    "success": true,
+    "analysis": {
+      "raw_markdown": "## \ud83d\udcca Widget Analysis Summary\n\n### Per-Widget Analysis Table\n| Widget Name           | Category      | Current Value | Min/Max       | Trend   | Status   | Key Observations                          |\n|-----------------------|---------------|---------------|---------------|---------|----------|-------------------------------------------|\n| CPU Usage             | Infrastructure| 38.9%         | 10.0%/95.0%   | Rising  | Warning  | Rising trend, but within acceptable range |\n| CPU Load Average      | Infrastructure| 2             | 0/8           | Rising  | Info     | Load average is increasing, monitor closely|\n| Memory Usage          | Infrastructure| 50.6%         | 15.0%/90.0%   | Rising  | Info     | Usage increasing, but within limits       |\n| Memory Available      | Infrastructure| 4.9 GB        | 0.5 GB/16.0 GB| Stable  | Info     | Stable availability                       |\n| Disk Usage /          | Storage       | 43.4%         | 20.0%/95.0%   | Stable  | Info     | Stable usage                              |\n| Disk Usage /var       | Storage       | 36.9%         | 10.0%/85.0%   | Stable  | Info     | Stable usage                              |\n| Disk I/O Read         | Storage       | 91.6 MB/s     | 5.0 MB/s/150.0 MB/s | Spiking | Critical | High I/O read, requires attention         |\n| Disk I/O Write        | Storage       | 52.3 MB/s     | 2.0 MB/s/80.0 MB/s | Spiking | Critical | High I/O write, requires attention        |\n| Network In            | Network       | 78.4 Mbps     | 1.0 Mbps/100.0 Mbps | Stable | Info     | High but stable network input             |\n| Network Out           | Network       | 21.7 Mbps     | 0.5 Mbps/50.0 Mbps | Rising  | Warning  | Rising trend, monitor for congestion      |\n| Network Errors        | Network       | 8             | 0/25          | Stable  | Info     | Within acceptable range                   |\n| TCP Connections       | Network       | 691           | 50/1000       | Stable  | Info     | Stable number of connections              |\n| Response Time         | Performance   | 538.5 ms      | 50.0 ms/2000.0 ms | Stable | Info     | Response time is stable                   |\n| Throughput            | Performance   | 1850          | 100/5000      | Stable  | Info     | Stable throughput                         |\n| Error Rate            | Reliability   | 3.1%          | 0.0%/5.0%     | Spiking | Critical | Spiking error rate, requires attention    |\n| Success Rate          | Reliability   | 97.4%         | 95.0%/100.0%  | Stable  | Info     | Stable success rate                       |\n| DB Connections        | Database      | 35            | 5/100         | Stable  | Info     | Stable DB connections                     |\n| DB Query Time         | Database      | 230.6 ms      | 10.0 ms/500.0 ms | Stable | Info     | Stable query time                         |\n| DB Lock Waits         | Database      | 36            | 0/50          | Stable  | Info     | Within acceptable range                   |\n| DB Cache Hit Rate     | Database      | 92.9%         | 85.0%/99.0%   | Stable  | Info     | Stable cache hit rate                     |\n| Active Users          | Application   | 420           | 50/1000       | Rising  | Info     | Rising trend, monitor for capacity        |\n| Session Count         | Application   | 157           | 20/500        | Rising  | Info     | Rising trend, monitor for capacity        |\n| Queue Length          | Application   | 54            | 0/100         | Rising  | Warning  | Rising queue length, potential bottleneck |\n| Cache Hit Rate        | Performance   | 92.6%         | 80.0%/98.0%   | Stable  | Info     | Stable cache hit rate                     |\n| Pod CPU Usage         | Container     | 57.9%         | 10.0%/90.0%   | Spiking | Warning  | Spiking usage, monitor for resource limits|\n| Pod Memory Usage      | Container     | 53.7%         | 20.0%/85.0%   | Stable  | Info     | Stable memory usage                       |\n| Container Restarts    | Container     | 3             | 0/10          | Spiking | Warning  | Spiking restarts, investigate causes      |\n| Node Count            | Container     | 9             | 3/20          | Falling | Info     | Decreasing node count, monitor closely    |\n| API Latency           | API           | 498.4 ms      | 25.0 ms/800.0 ms | Spiking | Critical | High latency, requires immediate attention|\n| Upload Rate           | Application   | 78            | 10/200        | Rising  | Info     | Rising trend, monitor for capacity        |\n| Processing Queue      | Application   | 245           | 0/500         | Stable  | Info     | Stable processing queue                   |\n| Concurrent Tasks      | Application   | 25            | 5/50          | Stable  | Info     | Stable concurrent tasks                   |\n| Worker Threads        | Application   | 15            | 2/20          | Rising  | Info     | Rising trend, monitor for resource limits |\n| Log Errors/min        | Observability | 65            | 0/100         | Stable  | Warning  | High error rate, investigate causes       |\n| Alert Count           | Observability | 4             | 0/15          | Spiking | Warning  | Spiking alerts, requires attention        |\n| Backup Status         | Reliability   | 37            | 0/48          | Stable  | Info     | Stable backup status                      |\n| SSL Cert Expiry       | Security      | 38            | 1/90          | Falling | Info     | SSL certificate expiry within safe range  |\n\n## \ud83d\udd0d Detailed Analysis\n\n### Infrastructure Widgets\n- **CPU Usage & Load Average**: Both are rising, but currently within acceptable thresholds. Continuous monitoring is recommended to prevent potential overload.\n- **Memory Usage & Availability**: Memory usage is rising but remains within limits. Ensure sufficient memory allocation to avoid future issues.\n\n### System Widgets\n- **Disk I/O**: Both read and write operations are spiking, indicating potential bottlenecks. Immediate investigation is needed to prevent system slowdowns.\n- **Network Traffic**: Network In is stable but high, while Network Out is rising. Monitor for potential congestion or bandwidth issues.\n\n## \u26a0\ufe0f Critical Issues & Alerts\n- **Disk I/O Read/Write**: High I/O operations require immediate attention to avoid performance degradation.\n- **Error Rate**: Spiking error rate indicates potential system reliability issues.\n- **API Latency**: High latency suggests performance bottlenecks that need urgent resolution.\n\n## \ud83d\udee0\ufe0f Recommendations\n\n### Immediate Actions (< 1 hour)\n- Investigate and resolve high Disk I/O operations.\n- Address spiking error rates to improve system reliability.\n- Analyze and mitigate causes of high API latency.\n\n### Short-term Actions (< 24 hours)\n- Monitor CPU and memory trends closely to anticipate potential overloads.\n- Investigate causes of container restarts and implement fixes.\n- Review network configurations to handle rising Network Out trends.\n\n### Long-term Optimizations (< 1 week)\n- Conduct a comprehensive review of disk usage and optimize storage configurations.\n- Implement caching strategies to reduce API latency and improve response times.\n- Plan for capacity upgrades if rising trends in active users and session counts persist.\n\n## \ud83d\udcc8 Performance Insights\nOverall, the system is functioning within acceptable parameters, but several key areas require immediate attention to prevent performance degradation. Disk I/O, error rates, and API latency are critical areas needing urgent action. Continuous monitoring and proactive capacity planning will help maintain system health.\n\n## \ud83c\udfaf Key Metrics Summary\n- **Total Widgets Analyzed**: 36\n- **Widgets with Issues**: 10\n- **Critical Alerts**: 3\n- **Performance Score**: 7/10\n\nThis analysis highlights the importance of addressing critical issues promptly while maintaining vigilance over rising trends to ensure optimal system performance.",
+      "structured_data": {
+        "summary": {},
+        "issues": [
+          "**Disk I/O Read/Write**: High I/O operations require immediate attention to avoid performance degradation.",
+          "**Error Rate**: Spiking error rate indicates potential system reliability issues.",
+          "**API Latency**: High latency suggests performance bottlenecks that need urgent resolution."
+        ],
+        "recommendations": {
+          "immediate": [
+            "Investigate and resolve high Disk I/O operations.",
+            "Address spiking error rates to improve system reliability.",
+            "Analyze and mitigate causes of high API latency."
+          ],
+          "short_term": [
+            "Monitor CPU and memory trends closely to anticipate potential overloads.",
+            "Investigate causes of container restarts and implement fixes.",
+            "Review network configurations to handle rising Network Out trends."
+          ],
+          "long_term": [
+            "Conduct a comprehensive review of disk usage and optimize storage configurations.",
+            "Implement caching strategies to reduce API latency and improve response times.",
+            "Plan for capacity upgrades if rising trends in active users and session counts persist.",
+            "**Total Widgets Analyzed**: 36",
+            "**Widgets with Issues**: 10",
+            "**Critical Alerts**: 3",
+            "**Performance Score**: 7/10"
+          ]
+        },
+        "performance_score": 7.0,
+        "key_metrics": {}
+      },
+      "model_used": "gpt-4o",
+      "analyzed_at": "2025-07-22T16:28:28.910950",
+      "widget_count": 37,
+      "tokens_used": 5280
+    }
+  },
+  "report_metadata": {
+    "generated_at": "2025-07-22 16:28:28",
+    "widget_count": 37,
+    "model_used": "gpt-4o",
+    "tokens_used": 5280
+  },
+  "widget_count": 37,
+  "generated_at": "20250722_162828"
+}
