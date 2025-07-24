@@ -1,0 +1,11 @@
+{
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "smtp_username": "",
+  "smtp_password": "",
+  "use_tls": true,
+  "sendgrid_api_key": "",
+  "from_email": "noreply@yourcompany.com",
+  "from_name": "Grafana Analysis System",
+  "delivery_method": "smtp"
+}
